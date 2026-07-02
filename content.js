@@ -25,7 +25,7 @@ const COURSE_CONFIG = {
     {
       id: 1,
       title: "Welcome, Mission & Hiring",
-      video: "videos/module-1.mp4",
+      video: "Module 1 - Handbook Overview.mp4",
       quiz: [
         {
           question: "What is the main purpose of this handbook overview module?",
@@ -62,7 +62,7 @@ const COURSE_CONFIG = {
     {
       id: 2,
       title: "Orientation, Training & Reviews",
-      video: "videos/module-2.mp4",
+      video: "Module 2 - Handbook Overview.mp4",
       quiz: [
         {
           question: "Orientation should be completed within how long after an employee's first day?",
@@ -89,7 +89,7 @@ const COURSE_CONFIG = {
     {
       id: 3,
       title: "Pay, Time & Benefits",
-      video: "videos/module-3.mp4",
+      video: "Module 3 - Handbook Overview.mp4",
       quiz: [
         {
           question: "Non-exempt (hourly) employees are paid overtime at what rate for hours worked over 40 in a week?",
@@ -111,7 +111,7 @@ const COURSE_CONFIG = {
     {
       id: 4,
       title: "Conduct, Dress Code & Harassment",
-      video: "videos/module-4.mp4",
+      video: "Module 4 - Handbook Overview.mp4",
       quiz: [
         {
           question: "If an employee brings you a harassment concern, what should you do first?",
@@ -143,7 +143,7 @@ const COURSE_CONFIG = {
     {
       id: 5,
       title: "PTO, Attendance & Accommodations",
-      video: "videos/module-5.mp4",
+      video: "Module 5 - Handbook Overview.mp4",
       quiz: [
         {
           question: "Does unused PTO carry over to the next year?",
@@ -170,7 +170,7 @@ const COURSE_CONFIG = {
     {
       id: 6,
       title: "Cash, Safety & Emergencies",
-      video: "videos/module-6.mp4",
+      video: "Module 6 - Handbook Overview.mp4",
       quiz: [
         {
           question: "If a grease fire breaks out in the kitchen, what should you use to put it out?",
