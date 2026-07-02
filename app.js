@@ -10,6 +10,9 @@
   const els = {
     railList: document.getElementById("railList"),
     railProgressFill: document.getElementById("railProgressFill"),
+    railUser: document.getElementById("railUser"),
+    railUserName: document.getElementById("railUserName"),
+    startOverBtn: document.getElementById("startOverBtn"),
     screens: {
       welcome: document.getElementById("screen-welcome"),
       module: document.getElementById("screen-module"),
@@ -77,7 +80,26 @@
     });
     const doneCount = modules.filter(m => state.results[m.id] && state.results[m.id].passed).length;
     els.railProgressFill.style.width = `${(doneCount / modules.length) * 100}%`;
+
+    if (state.user && state.user.name) {
+      els.railUser.hidden = false;
+      els.railUserName.textContent = state.user.name;
+    } else {
+      els.railUser.hidden = true;
+    }
   }
+
+  // ---------------- Start over (shared-computer safety) ----------------
+  els.startOverBtn.addEventListener("click", () => {
+    const ok = window.confirm("Start over? This clears the current person's saved progress on this browser so the next person can begin fresh.");
+    if (!ok) return;
+    try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+    state = { user: null, results: {}, completedAt: null };
+    currentModuleIndex = 0;
+    els.welcomeForm.reset();
+    renderRail();
+    showScreen("welcome");
+  });
 
   // ---------------- Welcome ----------------
   els.welcomeForm.addEventListener("submit", (e) => {
@@ -293,6 +315,15 @@
 
   // ---------------- Boot ----------------
   function boot() {
+    // Visiting the link with ?reset=1 at the end clears saved progress
+    // and starts fresh — e.g. https://irghospitality.github.io/manager-handbook/?reset=1
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("reset") === "1") {
+      try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+      state = { user: null, results: {}, completedAt: null };
+      window.history.replaceState({}, "", window.location.pathname);
+    }
+
     renderRail();
     if (state.user && state.user.name) {
       els.inputName.value = state.user.name;
