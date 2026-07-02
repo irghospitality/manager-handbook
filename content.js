@@ -122,7 +122,7 @@ const COURSE_CONFIG = {
           question: "Romantic relationships between a supervisor and a direct report are:",
           options: [
             "Allowed as long as both people consent",
-            "Not allowed — they must be reported and may lead to reassignment or termination",
+            "Not allowed — they must be reported and may lead to reassignment",
             "Fine as long as it doesn't affect scheduling",
             "Only a problem if a complaint is filed"
           ],
