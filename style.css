@@ -79,6 +79,42 @@ button, input { font-family: inherit; }
   line-height: 1.3;
 }
 
+.rail-user {
+  margin-bottom: 32px;
+  padding: 14px;
+  background: rgba(242,238,227,0.06);
+  border: 1px solid rgba(242,238,227,0.12);
+  border-radius: var(--radius);
+}
+.rail-user-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+  margin-bottom: 4px;
+}
+.rail-user-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--paper-raised);
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+.rail-reset-btn {
+  background: transparent;
+  border: none;
+  color: var(--brass);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.rail-reset-btn:hover { color: #C4954F; }
+
 .rail-list {
   list-style: none;
   margin: 0;
