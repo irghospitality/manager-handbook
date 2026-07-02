@@ -233,10 +233,11 @@
     } else {
       els.quizFeedback.className = "quiz-feedback is-fail";
       els.quizFeedback.textContent = `${score}/${m.quiz.length} correct. Review the highlighted answers and try again.`;
-      els.submitQuizBtn.type = "submit";
+      els.submitQuizBtn.type = "button";
       els.submitQuizBtn.textContent = "Retry";
-      els.submitQuizBtn.onclick = () => {
-        setTimeout(() => renderQuiz(m), 0);
+      els.submitQuizBtn.onclick = (ev) => {
+        ev.preventDefault();
+        renderQuiz(m);
       };
     }
   });
