@@ -28,33 +28,28 @@ const COURSE_CONFIG = {
       video: "Module 1 - Handbook Overview.mp4",
       quiz: [
         {
-          question: "What is the main purpose of this handbook overview module?",
+          question: "In what year was IRG founded, and with which restaurant?",
           options: [
-            "To give managers a working understanding of the IRG Employee Handbook and where to find policy detail",
-            "To replace the need to ever open the full handbook",
-            "To cover payroll software training",
-            "To onboard new hires only, not managers"
+            "2016, with The Pancake Pantry in Nashville, TN",
+            "2010, with a location in Texas",
+            "2017, with a hotel in Florida",
+            "2016, with a restaurant in North Carolina"
           ],
           correctIndex: 0
         },
         {
-          question: "As a manager, what should you do if you're unsure how a handbook policy applies to a situation?",
+          question: "What are IRG's three core values?",
           options: [
-            "Guess based on what feels fair",
-            "Refer to the manager portal / full handbook, or check with HR before acting",
-            "Wait until the employee brings it up again",
-            "Apply whatever the previous manager did"
+            "Speed, Consistency, Growth",
+            "History, Community, Hospitality",
+            "Innovation, Tradition, Profit",
+            "Quality, Integrity, Teamwork"
           ],
           correctIndex: 1
         },
         {
-          question: "Who is this handbook overview training built for?",
-          options: [
-            "Hourly employees only",
-            "Vendors and contractors",
-            "Managers",
-            "Guests"
-          ],
+          question: "What is IRG's stated vision for annual charitable giving?",
+          options: ["$10 million", "$50 million", "$90 million", "$200 million"],
           correctIndex: 2
         }
       ]
